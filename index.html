@@ -1,0 +1,65 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+<title>Login</title>
+</head>
+<body>
+    <h1 >To-Do List App</h1>
+  <div class="container">
+      <div class="row">
+          
+          <div class="col md-8">
+          
+
+    </div>
+            <div class="col md-4">
+
+       <div id="logreg-forms">
+        <form class="form-login" action="main.html" onsubmit="return validate()">
+            <h2 class="h3 mb-3 font-weight-bolder" style="text-align: center"> Login</h2>
+            
+            <br>
+            <div id="logreg">
+            <input type="text" id="username" class="form-control" placeholder="Username" required="" autofocus="">
+            <br>
+            <input type="password" id="passwordinput" class="form-control" placeholder="Password" required="">
+            
+            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            <a href="#" id="forgot_pswd">Forgot password?</a>
+            <br>
+        </div>
+        <br>
+            <h6 style="text-align:center">Don't have an account!</h6> 
+            
+            <a href="signup.html" class="btn btn-primary btn-block" role="button">SignUp for New Account</a>
+           
+            
+            <p style="text-align:center"> OR </p>
+           
+            <div class="social-login"  >
+                <a title="hello"></a>
+                <button class="btn facebook-btn social-btn" type="button" onclick="window.location.href='https://www.facebook.com/';"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+                <button class="btn google-btn social-btn" type="button" onclick="window.location.href='https://accounts.google.com/servicelogin';"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+            </div>
+        
+        </form>
+            
+    </div>
+</div>
+</div>
+</div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
