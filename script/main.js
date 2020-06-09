@@ -12,45 +12,61 @@ $.getJSON( "https://jsonplaceholder.typicode.com/todos", function( data ) {
     var items = [];
     $.each( data, function( key, val)  {
         
-        items += "<tr><td>"+val.id + "</td><td>"+val.userId + "</td><td>"+ val.title + "</td><td> <input type=checkbox name=checkbox></td></tr>";
-       var tab= $("#tabcontent").html(items);  
+        items += "<tr><td>"+val.id + "</td><td>"+val.userId + "</td><td>"+ val.title+ "</td><td>";
+        
+        if (val.completed == true) {
+       
+          items +="<input type=checkbox name=checkbox disabled=disabled checked=disabled></td></tr>"
+         } 
+        else{
+          items +="<input type=checkbox name=checkbox1 id=check></td></tr>"
+        }
+        
+        $("#tabcontent").html(items);  
+      
+     
+
     });
 
     $("#submit").css("visibility", "visible");
 
     
-    $('td').click( function(){
+
+
         myFunction = function(){ 
         var val=0;
-        $(':checkbox:checked').each(function(i){
+        $('#check:checked').each(function(i){
           val++;
           
         });
        
         return (val);
     }
-});
+
     
-        $('#submit').click(function(value){
-            var val=0;
-             val=myFunction();
+        $('td:nth-child(4)').click(function(value){
+            var val=myFunction();
             
 
             var pro=new Promise(function(resolve,reject)
 
         {
-        if(val>=5)
+        if(val==5)
         {
             resolve(alert("Congrats!!!"+ val + " tasks have been successfully completed."));
 
         }
+        
         else
         {
             reject(e);
+             
         }
       });
       pro.catch(function(e){
-        alert("Try to complete at least 5 tasks !!!")
+        if(e>5){
+        location.reload();
+      }
       })
     });
     
@@ -58,6 +74,10 @@ $.getJSON( "https://jsonplaceholder.typicode.com/todos", function( data ) {
 
 });
 
+$("#submit").click(function(){
+alert("Thanks for submitting");
+location.reload();
+})
 $('#logout').click(function(){
 window.location.replace("index.html");
 });
